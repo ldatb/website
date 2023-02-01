@@ -1,0 +1,135 @@
+html{
+    font-family: 'Open Sans',sans-serif;
+    background: whitesmoke;
+    height: 100%;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+hr{
+    background: gray;
+}
+
+.container{
+    position: relative;
+    display: flex;
+}
+
+.profile{
+    flex: 15%;
+    display: block;
+    position: relative;
+    margin: 5% 2% 0 10%;
+    width: 100%;
+    height: 100%;
+}
+
+.name{
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.email{
+    font-size: 12px !important;
+}
+
+.profile-photo{
+    position: relative;
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+}
+
+.social-links{
+    display: flex;
+    gap: 5px;
+}
+
+.separator{
+    width: 130px;
+    height: 2px;
+    background-color: black;
+}
+
+.skills-title{
+    font-size: medium;
+    font-weight: bold;
+}
+
+.info-cards{
+    position: relative;
+    margin-top: 5%;
+}
+
+.card{
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,.1);
+    overflow-x: hidden;
+    margin-bottom: 30px;
+    padding: 15px 30px 30px 30px;
+    background-color: white;
+}
+
+.tags{
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+.counter{
+    display: flex;
+    position: relative;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+.fof-body{
+    color: #888;
+    margin: 0;
+    transition: all 0.6s;
+}
+
+.fof-main{
+    display: table;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.fof{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.fof h1{
+    font-size: 50px;
+    display: inline-block;
+    padding-right: 12px;
+    animation: type .5s alternate infinite;
+}
+
+@keyframes type{
+    from{box-shadow: inset -3px 0px 0px #888;}
+    to{box-shadow: inset -3px 0px 0px transparent;}
+}
+
+@media screen and (max-width:1090px){
+    #profile{
+        margin-left: 5%;
+    }
+}
+@media screen and (max-width:850px){
+    #container{
+        display: block;
+    }
+    #profile{
+        width: 90%;
+    }
+    .card{
+        margin: 0 5%;
+        margin-bottom: 30px;
+    }
+}
