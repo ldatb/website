@@ -2,21 +2,17 @@
 resource "aws_s3_bucket" "domain_bucket" {
     bucket = var.domain_name
     tags = var.tags
-
-    provisioner "local-exec" {
-        command = "aws s3 cp --recursive ${var.website_dir} s3://${aws_s3_bucket.domain_bucket.id}/"
-    }
 }
 
 resource "aws_s3_bucket_website_configuration" "domain_bucket_website" {
     bucket = aws_s3_bucket.domain_bucket.id
 
     index_document {
-        suffix = "index.html"
+        suffix = var.html_index
     }
 
     error_document {
-        key = "error.html"
+        key = var.html_error
     }
 }
 
@@ -50,6 +46,29 @@ data "aws_iam_policy_document" "domain_bucket_policy_data" {
 resource "aws_s3_bucket_policy" "domain_bucket_policy" {
     bucket = aws_s3_bucket.domain_bucket.id
     policy = data.aws_iam_policy_document.domain_bucket_policy_data.json
+}
+
+
+# Website files
+resource "aws_s3_object" "index_page" {
+    bucket = aws_s3_bucket.domain_bucket.id
+    key = var.html_index
+    source = "${path.module}/../../../webpage/${var.html_index}"
+    content_type = "text/html"
+}
+
+resource "aws_s3_object" "error_page" {
+    bucket = aws_s3_bucket.domain_bucket.id
+    key = var.html_error
+    source = "${path.module}/../../../webpage/${var.html_error}"
+    content_type = "text/html"
+}
+
+resource "aws_s3_object" "css_file" {
+    bucket = aws_s3_bucket.domain_bucket.id
+    key = var.css_file
+    source = "${path.module}/../../../webpage/${var.css_file}"
+    content_type = "text/css"
 }
 
 

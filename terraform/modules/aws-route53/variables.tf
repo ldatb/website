@@ -16,13 +16,13 @@ variable "subdomain_bucket_zone_id" {
     default = "subdomain-bucket-zone-id"
 }
 
-variable "domain_website_domain" {
-    description = "The domain to the domain bucket"
+variable "domain_website_endpoint" {
+    description = "The endpoint to the domain bucket"
     type = string
     default = "domain-bucket"
 }
 
-variable "subdomain_website_domain" {
+variable "subdomain_website_endpoint" {
     description = "The endpoint to the subdomain bucket"
     type = string
     default = "subdomain-bucket"
