@@ -10,9 +10,19 @@ resource "aws_s3_bucket_website_configuration" "domain_bucket_website" {
     index_document {
         suffix = var.html_index
     }
-
     error_document {
         key = var.html_error
+    }
+}
+
+resource "aws_s3_bucket_cors_configuration" "domain_bucket_cors" {
+    bucket = aws_s3_bucket.domain_bucket.id
+
+    cors_rule {
+        allowed_headers = ["Authorization", "Content-Length"]
+        allowed_methods = ["GET", "POST"]
+        allowed_origins = ["https://www.${var.domain_name}"]
+        max_age_seconds = 3000
     }
 }
 

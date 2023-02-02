@@ -4,26 +4,26 @@ variable "domain_name" {
     default = "bucket.com"
 }
 
-variable "domain_bucket_zone_id" {
-    description = "The zone id for the domain bucket"
-    type = string
-    default = "domain-bucket-zone-id"
-}
-
-variable "subdomain_bucket_zone_id" {
-    description = "The zone id for the subdomain bucket"
-    type = string
-    default = "subdomain-bucket-zone-id"
-}
-
-variable "domain_website_endpoint" {
-    description = "The endpoint to the domain bucket"
+variable "domain_dist_name" {
+    description = "The endpoint to the domain distribution"
     type = string
     default = "domain-bucket"
 }
 
-variable "subdomain_website_endpoint" {
-    description = "The endpoint to the subdomain bucket"
+variable "subdomain_dist_name" {
+    description = "The endpoint to the subdomain distribution"
     type = string
     default = "subdomain-bucket"
+}
+
+variable "domain_dist_zone_id" {
+    description = "The zone id for the domain distribution"
+    type = string
+    default = "domain-bucket-zone-id"
+}
+
+variable "subdomain_dist_zone_id" {
+    description = "The zone id for the subdomain distribution"
+    type = string
+    default = "subdomain-bucket-zone-id"
 }
