@@ -1,8 +1,8 @@
 # Domain dist
 resource "aws_cloudfront_distribution" "domain_distribution" {
     origin {
-        domain_name = var.domain_regional_domain
-        origin_id = "S3-${var.domain_bucket_id}"
+        domain_name = var.domain_website_endpoint
+        origin_id = "S3-${var.domain_name}"
 
         custom_origin_config {
             http_port = 80
@@ -72,8 +72,8 @@ resource "aws_cloudfront_distribution" "domain_distribution" {
 # Subdomain dist
 resource "aws_cloudfront_distribution" "subdomain_distribution" {
     origin {
-        domain_name = var.subdomain_regional_domain
-        origin_id = "S3-${var.subdomain_bucket_id}"
+        domain_name = var.subdomain_website_endpoint
+        origin_id = "S3-${var.domain_name}"
 
         custom_origin_config {
             http_port = 80

@@ -22,13 +22,13 @@ variable "subdomain_bucket_id" {
     default = "subdomain.id"
 }
 
-variable "domain_regional_domain" {
-    description = "The regional domain of the domain endpoint"
+variable "domain_website_endpoint" {
+    description = "The domain's website endpoint"
     type = string
     default = "domain.regional"
 }
 
-variable "subdomain_regional_domain" {
+variable "subdomain_website_endpoint" {
     description = "The regional domain of the subdomain endpoint"
     type = string
     default = "subdomain.regional"

@@ -18,8 +18,8 @@ module "website_ssl_cert" {
 module "website_cloudfront_dist" {
     source = "./modules/aws-cloudfront"
 
-    domain_regional_domain = module.website_s3_bucket.domain_regional_domain
-    subdomain_regional_domain = module.website_s3_bucket.subdomain_regional_domain
+    domain_website_endpoint = module.website_s3_bucket.domain_website_endpoint
+    subdomain_website_endpoint = module.website_s3_bucket.subdomain_website_endpoint
     domain_bucket_id = module.website_s3_bucket.domain_bucket_id
     subdomain_bucket_id = module.website_s3_bucket.subdomain_bucket_id
     ssl_cert_arn = module.website_ssl_cert.ssl_cert_arn
