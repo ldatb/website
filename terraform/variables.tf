@@ -13,6 +13,12 @@ variable "domain_name" {
     default = "ldatb.com"
 }
 
+variable "db_name" {
+    description = "The name of the database"
+    type = string
+    default = "ldatb-com"
+}
+
 variable "html_index" {
     description = "The HTML Index file"
     type = string
