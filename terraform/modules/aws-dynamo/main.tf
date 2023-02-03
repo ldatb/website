@@ -2,11 +2,11 @@ resource "aws_dynamodb_table" "db_table" {
     name = "db-${var.db_name}"
 
     billing_mode = "PAY_PER_REQUEST"
-    hash_key = "visitors"
+    hash_key = "key"
 
     attribute {
-        name = "visitors"
-        type = "N"
+        name = "key"
+        type = "S"
     }
 
     tags = var.tags
@@ -18,7 +18,8 @@ resource "aws_dynamodb_table_item" "db_table_item" {
 
     item = <<EOF
     {
-        "visitors": {"N": "0"}
+        "key": {"S": "visitors"},
+        "value": {"N": "0"}
     }
     EOF
 }
