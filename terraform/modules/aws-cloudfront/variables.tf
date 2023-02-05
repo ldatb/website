@@ -34,6 +34,12 @@ variable "subdomain_website_endpoint" {
     default = "subdomain.regional"
 }
 
+variable "api_invoke_url" {
+    description = "The invoke URL for the API"
+    type = string
+    default = "api.regional"
+}
+
 variable "html_index" {
     description = "The HTML Index file"
     type = string

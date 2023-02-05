@@ -16,9 +16,14 @@ variable "lambda_function_name" {
     default = "function"
 }
 
-
 variable "lambda_arn" {
     description = "The ARN for the lambda function"
     type = string
     default = "arn"
+}
+
+variable "ssl_cert_arn" {
+    description = "SSL Cert ARN"
+    type = string
+    default = "ssl"
 }

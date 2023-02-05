@@ -10,20 +10,33 @@ variable "domain_dist_name" {
     default = "domain-bucket"
 }
 
-variable "subdomain_dist_name" {
-    description = "The endpoint to the subdomain distribution"
-    type = string
-    default = "subdomain-bucket"
-}
-
 variable "domain_dist_zone_id" {
     description = "The zone id for the domain distribution"
     type = string
     default = "domain-bucket-zone-id"
 }
 
+variable "subdomain_dist_name" {
+    description = "The endpoint to the subdomain distribution"
+    type = string
+    default = "subdomain-bucket"
+}
+
+
 variable "subdomain_dist_zone_id" {
     description = "The zone id for the subdomain distribution"
     type = string
     default = "subdomain-bucket-zone-id"
+}
+
+variable "api_dist_name" {
+    description = "The endpoint to the API distribution"
+    type = string
+    default = "api"
+}
+
+variable "api_dist_zone_id" {
+    description = "The zone id for the API distribution"
+    type = string
+    default = "api-zone-id"
 }

@@ -1,8 +1,13 @@
 resource "aws_api_gateway_rest_api" "api_gateway" {
-    name = "gateway-${var.domain_name}"
+    name = "api.${var.domain_name}"
     endpoint_configuration {
         types = ["REGIONAL"]
     }
+}
+
+resource "aws_api_gateway_domain_name" "api_domain" {
+    certificate_arn = var.ssl_cert_arn
+    domain_name = "api.${var.domain_name}"
 }
 
 resource "aws_api_gateway_resource" "api_visitors" {
@@ -43,6 +48,10 @@ resource "aws_api_gateway_integration_response" "api_lambda_response" {
     resource_id = aws_api_gateway_resource.api_visitors.id
     http_method = aws_api_gateway_method.api_visitors_method.http_method
     status_code = aws_api_gateway_method_response.response_200.status_code
+
+    depends_on = [
+        aws_api_gateway_integration.api_lambda
+    ]
 }
 
 resource "aws_lambda_permission" "lambda_permission" {
@@ -54,10 +63,10 @@ resource "aws_lambda_permission" "lambda_permission" {
     source_arn = "${aws_api_gateway_rest_api.api_gateway.execution_arn}/*/*/*"
 }
 
-resource "aws_api_gateway_deployment" "api_main_deployment" {
+resource "aws_api_gateway_deployment" "api_v1_deployment" {
     rest_api_id = aws_api_gateway_rest_api.api_gateway.id
     
-    stage_name = "main"
+    stage_name = "v1"
     depends_on = [
         aws_api_gateway_integration.api_lambda,
         aws_api_gateway_integration_response.api_lambda_response

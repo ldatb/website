@@ -36,3 +36,9 @@ variable "css_file" {
     type = string
     default = "styles.css"
 }
+
+variable "js_file" {
+    description = "The JavaScript file"
+    type = string
+    default = "visitors.js"
+}

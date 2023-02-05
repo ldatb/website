@@ -28,3 +28,16 @@ resource "aws_route53_record" "subdomain_a_record" {
         evaluate_target_health = false
     }
 }
+
+resource "aws_route53_record" "api_a_record" {
+    zone_id = data.aws_route53_zone.registar_zone.zone_id
+
+    name = "api.${var.domain_name}"
+    type = "A"
+
+    alias {
+        name = var.api_dist_name
+        zone_id = var.api_dist_zone_id
+        evaluate_target_health = false
+    }
+}
