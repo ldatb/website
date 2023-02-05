@@ -1,5 +1,5 @@
 const getVisitors = async () => {
-    const request = await fetch('https://d1lk9q35flvxh1.cloudfront.net/v1/visitors', {
+    const request = await fetch('api.ldatb.com/v1/visitors', {
         method: "GET",
         headers: {
             "Access-Control-Allow-Origin": "*",
