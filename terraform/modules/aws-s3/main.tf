@@ -81,6 +81,20 @@ resource "aws_s3_object" "css_file" {
     content_type = "text/css"
 }
 
+resource "aws_s3_object" "css_file" {
+    bucket = aws_s3_bucket.domain_bucket.id
+    key = var.css_file
+    source = "${path.module}/../../../webpage/${var.css_file}"
+    content_type = "text/css"
+}
+
+resource "aws_s3_object" "js_file" {
+    bucket = aws_s3_bucket.domain_bucket.id
+    key = var.js_file
+    source = "${path.module}/../../../webpage/${var.js_file}"
+    content_type = "text/javascript"
+}
+
 
 # Subdomain bucket
 resource "aws_s3_bucket" "subdomain_bucket" {
