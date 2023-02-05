@@ -13,7 +13,9 @@ const dynamo = DynamoDBDocumentClient.from(client);
 
 const tableName = "db-ldatb-com";
 
-export const handler = async (event, context) => {
+'use strict'
+
+export const handler = async function (event, context, callback) {
     let body;
     let statusCode = 200;
     const headers = {
@@ -49,10 +51,12 @@ export const handler = async (event, context) => {
     } finally {
         body = JSON.stringify(body);
     }
-    
-    return {
+
+    let response = {
         statusCode,
         body,
         headers,
-    };
+    }
+    
+    callback(null, response);
 };

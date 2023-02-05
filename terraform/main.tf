@@ -5,6 +5,22 @@ module "database" {
   tags    = var.tags
 }
 
+module "api_lambda" {
+  source = "./modules/aws-lambda"
+
+  domain_name = var.db_name
+  db_name = module.database.db_name
+  db_arn = module.database.db_arn
+}
+
+module "api_gateway" {
+  source = "./modules/aws-api-gateway"
+
+  domain_name = var.domain_name
+  lambda_function_name = module.api_lambda.lambda_function_name
+  lambda_arn = module.api_lambda.lamda_arn
+}
+
 module "s3_bucket" {
     source = "./modules/aws-s3"
 
