@@ -1,0 +1,27 @@
+name: Upload API files to Lambda function
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  deploy_lambda:
+    name: Deploy zip files to AWS Lambda
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Zip files
+        run: cd terraform/modules/aws-lambda && zip visitors.zip index.mjs
+      - name: Deploy to Lambda
+        uses: appleboy/lambda-action@v0.1.5
+        with:
+          aws_access_key_id: ${{ secrets.AWS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws_region: 'us-east-1'
+          function_name: ldatb-com-handler
+          zip_file: terraform/modules/aws-lambda/visitors.zip
+          memory_size: 128
+          timeout: 10
+          handler: index.handler
+          runtime: nodejs18.x
