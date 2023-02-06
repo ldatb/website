@@ -21,5 +21,3 @@ jobs:
           aws_region: 'us-east-1'
           function_name: ldatb-com-handler
           zip_file: terraform/modules/aws-lambda/visitors.zip
-          handler: index.handler
-          runtime: nodejs18.x
