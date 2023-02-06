@@ -81,6 +81,13 @@ resource "aws_s3_object" "css_file" {
     content_type = "text/css"
 }
 
+resource "aws_s3_object" "ico_file" {
+    bucket = aws_s3_bucket.domain_bucket.id
+    key = var.ico_file
+    source = "${path.module}/../../../webpage/media/${var.ico_file}"
+    content_type = "image/x-icon"
+}
+
 resource "aws_s3_object" "js_file" {
     bucket = aws_s3_bucket.domain_bucket.id
     key = var.js_file

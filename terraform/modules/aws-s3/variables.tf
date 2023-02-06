@@ -28,6 +28,12 @@ variable "css_file" {
     default = "styles.css"
 }
 
+variable "ico_file" {
+    description = "The favicon file"
+    type = string
+    default = "favicon.ico"
+}
+
 variable "js_file" {
     description = "The JavaScript file"
     type = string

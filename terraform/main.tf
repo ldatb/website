@@ -36,6 +36,7 @@ module "s3_bucket" {
     html_index = var.html_index
     html_error = var.html_error
     css_file = var.css_file
+    ico_file = var.ico_file
     js_file = var.js_file
     tags = var.tags
 }
