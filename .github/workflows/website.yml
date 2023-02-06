@@ -11,14 +11,17 @@ jobs:
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
-      AWS_DEFAULT_REGION: 'us-east-1'
+      AWS_REGION: 'us-east-1'
     steps:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Upload to S3
-        uses: lbertenasco/s3-deploy@v1.2.4
-        with:
-          folder: 'webpage'
-          bucket: ${{ secrets.AWS_BUCKET }}
-          dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
-          invalidation: / *
+        uses: jakejarvis/s3-sync-action@v0.5.1
+        env:
+          AWS_S3_BUCKET: ${{ secrets.AWS_BUCKET }}
+          SOURCE_DIR: 'webpage'
+      - name: Invalidate CloudFront distribution
+        uses: chetan/invalidate-cloudfront-action@v2
+        env:
+          DISTRIBUTION: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+          PATHS: "/"
