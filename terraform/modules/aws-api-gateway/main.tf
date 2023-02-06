@@ -41,6 +41,11 @@ resource "aws_api_gateway_method_response" "response_200" {
     resource_id = aws_api_gateway_resource.api_visitors.id
     http_method = aws_api_gateway_method.api_visitors_method.http_method
     status_code = "200"
+    response_parameters = {
+        "method.response.header.Access-Control-Allow-Headers" = true,
+        "method.response.header.Access-Control-Allow-Methods" = true,
+        "method.response.header.Access-Control-Allow-Origin" = true
+    }
 }
 
 resource "aws_api_gateway_integration_response" "api_lambda_response" {
@@ -48,6 +53,12 @@ resource "aws_api_gateway_integration_response" "api_lambda_response" {
     resource_id = aws_api_gateway_resource.api_visitors.id
     http_method = aws_api_gateway_method.api_visitors_method.http_method
     status_code = aws_api_gateway_method_response.response_200.status_code
+
+    response_parameters = {
+        "method.response.header.Access-Control-Allow-Headers" = "'Content-Type,Authorization'",
+        "method.response.header.Access-Control-Allow-Methods" = "'GET,OPTIONS'",
+        "method.response.header.Access-Control-Allow-Origin" = "'*'"
+    }
 
     depends_on = [
         aws_api_gateway_integration.api_lambda
