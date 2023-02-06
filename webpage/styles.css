@@ -14,6 +14,16 @@ hr{
     background: gray;
 }
 
+.link {
+    color: rgb(17, 63, 163);
+}
+
+.link:hover {
+    color: rgb(29, 78, 182);
+    font-weight: bold;
+    transition: all 1s;
+}
+
 .container{
     position: relative;
     display: flex;
