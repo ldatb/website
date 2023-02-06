@@ -84,7 +84,7 @@ resource "aws_s3_object" "css_file" {
 resource "aws_s3_object" "ico_file" {
     bucket = aws_s3_bucket.domain_bucket.id
     key = var.ico_file
-    source = "${path.module}/../../../webpage/media/${var.ico_file}"
+    source = "${path.module}/../../../webpage/${var.ico_file}"
     content_type = "image/x-icon"
 }
 
