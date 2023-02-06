@@ -62,6 +62,4 @@ module "dns_route53" {
     subdomain_dist_name = module.cloudfront_dist.subdomain_dist_domain
     domain_dist_zone_id = module.cloudfront_dist.domain_dist_zone_id
     subdomain_dist_zone_id = module.cloudfront_dist.subdomain_dist_zone_id
-    api_dist_name = module.cloudfront_dist.api_dist_domain
-    api_dist_zone_id = module.cloudfront_dist.api_dist_zone_id
 }

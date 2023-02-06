@@ -28,15 +28,3 @@ variable "subdomain_dist_zone_id" {
     type = string
     default = "subdomain-bucket-zone-id"
 }
-
-variable "api_dist_name" {
-    description = "The endpoint to the API distribution"
-    type = string
-    default = "api"
-}
-
-variable "api_dist_zone_id" {
-    description = "The zone id for the API distribution"
-    type = string
-    default = "api-zone-id"
-}
