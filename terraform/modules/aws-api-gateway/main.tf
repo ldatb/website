@@ -5,15 +5,17 @@ resource "aws_api_gateway_rest_api" "api_gateway" {
     }
 }
 
-resource "aws_api_gateway_domain_name" "api_domain" {
-    certificate_arn = var.ssl_cert_arn
-    domain_name = "api.${var.domain_name}"
+resource "aws_api_gateway_resource" "api_v1" {
+    rest_api_id = aws_api_gateway_rest_api.api_gateway.id
+
+    parent_id = aws_api_gateway_rest_api.api_gateway.root_resource_id
+    path_part = "v1"
 }
 
 resource "aws_api_gateway_resource" "api_visitors" {
     rest_api_id = aws_api_gateway_rest_api.api_gateway.id
 
-    parent_id = aws_api_gateway_rest_api.api_gateway.root_resource_id
+    parent_id = aws_api_gateway_resource.api_v1.id
     path_part = "visitors"
 }
 
@@ -74,10 +76,10 @@ resource "aws_lambda_permission" "lambda_permission" {
     source_arn = "${aws_api_gateway_rest_api.api_gateway.execution_arn}/*/*/*"
 }
 
-resource "aws_api_gateway_deployment" "api_v1_deployment" {
+resource "aws_api_gateway_deployment" "api_deployment" {
     rest_api_id = aws_api_gateway_rest_api.api_gateway.id
     
-    stage_name = "v1"
+    stage_name = "api"
     depends_on = [
         aws_api_gateway_integration.api_lambda,
         aws_api_gateway_integration_response.api_lambda_response
