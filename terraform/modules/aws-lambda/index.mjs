@@ -20,6 +20,9 @@ export const handler = async function (event, context, callback) {
     let statusCode = 200;
     const headers = {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS,GET"
     };
     
     try {
