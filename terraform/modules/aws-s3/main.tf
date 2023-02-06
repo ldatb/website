@@ -85,7 +85,7 @@ resource "aws_s3_object" "js_file" {
     bucket = aws_s3_bucket.domain_bucket.id
     key = var.js_file
     source = "${path.module}/../../../webpage/${var.js_file}"
-    content_type = "text/javascript"
+    content_type = "application/x-javascript"
 }
 
 
