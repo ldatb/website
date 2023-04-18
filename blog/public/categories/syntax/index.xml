@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>syntax on Lucas&#39; Blog</title>
+    <link>http://blog.ldatb.com/categories/syntax/</link>
+    <description>Recent content in syntax on Lucas&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2023 [Lucas de Ataides](https://ldatb.com)</copyright>
+    <lastBuildDate>Mon, 06 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://blog.ldatb.com/categories/syntax/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title> Cloud Resume Challenge: My (AWS)some journey </title>
+      <link>http://blog.ldatb.com/post/cloud-resume-challenge/</link>
+      <pubDate>Mon, 06 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.ldatb.com/post/cloud-resume-challenge/</guid>
+      <description>The Challenge I decided to try the challenge on AWS, since most of the jobs I could find require some knowledge of it. Maybe I can try Azure or GCP in the future for other projects, but AWS&amp;rsquo;s free tier helped a lot with this decision. Certification
+I don&amp;rsquo;t have the AWS Cloud Practitioner certification, but this was an amazing way to study for this certification, and I am for sure giving it a try after this.</description>
+    </item>
+    
+  </channel>
+</rss>
