@@ -54,6 +54,10 @@ hr{
     border-radius: 10px;
 }
 
+.description{
+  font-size: 0.9rem;
+}
+
 .social-links{
     display: flex;
     gap: 5px;
