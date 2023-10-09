@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="map[name:Lucas de Ataides]">
+<meta name="description" content="I&amp;rsquo;ve always been a fan of pipelines, automation and all this awesome stuff, but I had no idea there was a name for it. DevOps. It really changed my mind, and my career goals. I was constantly doing courses and looking for fun projects to do, but no one was satisfying me enough, they were either too simple or didn&amp;rsquo;t fit my goal. That was until I found out about the Cloud Résumé Challenge." />
+<meta name="keywords" content="homepage, blog, developer, cloud, software, cloud, resume, aws, development" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="./2023/02/cloud-r%C3%A9sum%C3%A9-challenge-my-awssome-journey/" />
+
+
+    <title>
+        
+            Cloud Résumé Challenge: My (AWS)some journey :: Lucas de Ataides 
+        
+    </title>
+
+
+
+
+
+<link rel="stylesheet" href="/main.b78c3be9451dc4ca61ca377f3dc2cf2e6345a44c2bae46216a322ef366daa399.css" integrity="sha256-t4w76UUdxMphyjd/PcLPLmNFpEwrrkYhajIu82bao5k=">
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+<meta itemprop="name" content="Cloud Résumé Challenge: My (AWS)some journey">
+<meta itemprop="description" content="I&rsquo;ve always been a fan of pipelines, automation and all this awesome stuff, but I had no idea there was a name for it. DevOps. It really changed my mind, and my career goals. I was constantly doing courses and looking for fun projects to do, but no one was satisfying me enough, they were either too simple or didn&rsquo;t fit my goal. That was until I found out about the Cloud Résumé Challenge."><meta itemprop="datePublished" content="2023-02-06T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-02-06T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1241"><meta itemprop="image" content="."/>
+<meta itemprop="keywords" content="cloud,resume,aws,development," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="."/>
+
+<meta name="twitter:title" content="Cloud Résumé Challenge: My (AWS)some journey"/>
+<meta name="twitter:description" content="I&rsquo;ve always been a fan of pipelines, automation and all this awesome stuff, but I had no idea there was a name for it. DevOps. It really changed my mind, and my career goals. I was constantly doing courses and looking for fun projects to do, but no one was satisfying me enough, they were either too simple or didn&rsquo;t fit my goal. That was until I found out about the Cloud Résumé Challenge."/>
+
+
+
+    <meta property="og:title" content="Cloud Résumé Challenge: My (AWS)some journey" />
+<meta property="og:description" content="I&rsquo;ve always been a fan of pipelines, automation and all this awesome stuff, but I had no idea there was a name for it. DevOps. It really changed my mind, and my career goals. I was constantly doing courses and looking for fun projects to do, but no one was satisfying me enough, they were either too simple or didn&rsquo;t fit my goal. That was until I found out about the Cloud Résumé Challenge." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="./2023/02/cloud-r%C3%A9sum%C3%A9-challenge-my-awssome-journey/" /><meta property="og:image" content="."/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-02-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-02-06T00:00:00+00:00" />
+
+
+
+
+    <meta property="article:section" content="Development" />
+
+
+
+    <meta property="article:published_time" content="2023-02-06 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">&gt;</span>
+            <span class="logo__text ">
+                ldatb</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/about/">About</a></li><li><a href="/posts/">Posts</a></li><li><a href="/resume/">Résumé</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+                <span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+   3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+   13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+ </svg></span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+  <main class="post">
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        6 minutes
+
+        
+      </p>
+    </div>
+
+    <article>
+      <h1 class="post-title">
+        <a href="./2023/02/cloud-r%C3%A9sum%C3%A9-challenge-my-awssome-journey/">Cloud Résumé Challenge: My (AWS)some journey</a>
+      </h1>
+
+      
+
+      
+
+      
+
+      <div class="post-content">
+        <p>I&rsquo;ve always been a fan of pipelines, automation and all this awesome
+stuff, but I had no idea there was a name for it. DevOps. It really
+changed my mind, and my career goals. I was constantly doing courses
+and looking for fun projects to do, but no one was satisfying me
+enough, they were either too simple or didn&rsquo;t fit my goal. That was
+until I found out about the <a href="https://cloudresumechallenge.dev/docs/the-challenge/">Cloud Résumé Challenge</a>.
+It is an amazing resource to learn and practice not only DevOps, by
+Cloud platforms (which itself are a part of DevOps). It is a very
+popular challenge, but I had no idea it existed, so I tried to give it
+a go!</p>
+<h2 id="the-challenge">The Challenge</h2>
+<p>I decided to try the challenge on AWS, since most of the jobs I could
+find require some knowledge of it. Maybe I can try Azure or GCP in the
+future for other projects, but AWS&rsquo;s free tier helped a lot with this
+decision.</p>
+<h2 id="certification">Certification</h2>
+<p>I don&rsquo;t have the AWS Cloud Practitioner certification, but this was an
+amazing way to study for this certification, and I am for sure giving
+it a try after this.</p>
+<h2 id="html--css">HTML + CSS</h2>
+<p>&rsquo;m not a fan of web development, so I simply went to <a href="https://codepen.io/">CodePen</a>
+and searched some cool websites that I could use as a template. For me
+this worked fine since I have no intentions on doing anything front-end
+related, my focus is on DevOps, but, if you want to become a full-stack
+(even though I don&rsquo;t consider DevOps a part of full-stack, some people
+do) developer, this is a essential step for you.</p>
+<p><em>UPDATE (2023-10-08): I&rsquo;ve updated a lot on this website. Started
+using <a href="https://gohugo.io/">Hugo</a> to generate a better looking website,
+and change a lot on how the backend and IaaC of this project works as
+well. You can find everything in the <a href="https://github.com/ldatb/website">GitHub repo</a>.</em></p>
+<p><strong>What I learned:</strong></p>
+<ul>
+<li>Basic HTML and CSS</li>
+<li><em>UPDATE (2023-10-08): Static website generation</em></li>
+</ul>
+<h2 id="https">HTTPS</h2>
+<p>This was also really simple, as AWS CloudFront does all the heavy lifting
+for you, all I had to do was point my S3 Bucket to a CloudFront
+distribution and that&rsquo;s it! Obviously later on I would have to create a
+DNS certificate, but for now, simply hosting it on CloudFront would
+work. As I would discover later on the process, this would be one of
+the most important steps in this challenge.</p>
+<p><strong>What I learned:</strong></p>
+<ul>
+<li>AWS CloudFront Distributions</li>
+<li>Terraform started getting more and more difficult. Took me a couple
+of days to make the IaaC for this work.</li>
+</ul>
+<h2 id="dns">DNS</h2>
+<p>I got super proud of this (and also super frustrated), because my
+awesome resume could now be accessible via my own domain! This turned
+out to be trickier than I expected, because I had to create custom DNS
+certificates, learn how domains work, CNAME, A registers, etc., etc.
+It was a difficult step, but the most awesome one.</p>
+<p><strong>What I learned:</strong></p>
+<ul>
+<li>AWS Route 53</li>
+<li>DNS Domains and Certificates</li>
+</ul>
+<h2 id="database">Database</h2>
+<p><em>UPDATE (2023-10-08): The new version of this website does not uses
+this anymore, but I&rsquo;ll leave this step here as it was part of the
+challenge.</em></p>
+<p>This was a tricky part, because I was trying to figure out how to
+deploy a MariaDB database with Terraform, and configure the table I
+needed. I searched a lot for answers, but turns out I was
+over-complicating things, and I could simply use AWS DynamoDB for it.
+At first, I was a bit skeptical of using a No-SQL database for a such
+a simple thing (I would only need 1 row of data), but the hardest part
+was just understanding how DynamoDB works. With that, I also had to
+learn about VPCs, since I don&rsquo;t want anyone having direct access to my
+database.</p>
+<p><strong>What I learned:</strong></p>
+<ul>
+<li>AWS DynamoDB</li>
+<li>AWS VPCs</li>
+<li>NoSQL databases</li>
+</ul>
+<h2 id="api">API</h2>
+<p><em>UPDATE (2023-10-08): Same as above. The new version of this website
+does not uses this anymore, but I&rsquo;ll leave this step here as it was
+part of the challenge.</em></p>
+<p>There&rsquo;s no point in having a database that no one can access, so I had
+to make an API to call for the data I needed. The problem was, since I
+was hosting my website on an S3 Bucket, I could not create the API with
+the website, I had to make use of serverless functions (AWS Lambda).
+That (as everything in this challenge) was quite tricky, but it gets
+really simple when you get the hang of it, it&rsquo;s quite intuitive.
+I simply had to make one call to the database requesting the number of
+visitors, and that was it!</p>
+<p>The next thing I had to do was connect this lambda function to an AWS
+API Gateway (which has a quite confusing dashboard) and I could access
+it anywhere! I stumbled upon some issue on that step, and had to learn
+about permissions and roles on AWS, since my lambda function was
+(at first) not being executed by the API.</p>
+<p><strong>What I learned:</strong></p>
+<ul>
+<li>AWS Lambda</li>
+<li>Serverless functions</li>
+<li>REST API</li>
+<li>AWS API Gateway</li>
+<li>AWS roles and permissions</li>
+</ul>
+<h2 id="visitors-counter">Visitors Counter</h2>
+<p><em>UPDATE (2023-10-08): Same as above. The new version of this website
+does not uses this anymore, but I&rsquo;ll leave this step here as it was
+part of the challenge.</em></p>
+<p>Now, with the API ready, I could make my website display a number of
+visitors! But it wasn&rsquo;t that simple. Again, as I was hosting it on an
+S3 bucket, I had to do some shenanigans to make an API call that did
+not go over the internet (since S3 Buckets are a simple block storage
+and don&rsquo;t have any computational power).</p>
+<p>My solution was adding the API Gateway to the same CloudFront
+distribution as the S3 Bucket, that way, I could access the API
+endpoint &ldquo;locally&rdquo; (like it was in a folder of the S3 Bucket). The
+JavaScript part of it was super easy, simply make a call to that API
+and use it.</p>
+<p><strong>What I learned:</strong></p>
+<ul>
+<li>How to combine AWS API Gateway with static websites hosted on AWS S3
+Buckets</li>
+<li>Making API calls with JavaScript</li>
+</ul>
+<h2 id="infrastructure-as-a-code-iac">Infrastructure as a code (IaC)</h2>
+<p><em>UPDATE (2023-10-08): Since I&rsquo;m now using <a href="https://gohugo.io/">Hugo</a>
+to generate this website, the Terraform project is not required anymore,
+as Hugo has a built-in <a href="https://gohugo.io/hosting-and-deployment/hugo-deploy/">deployment tool</a>.
+Nonetheless I&rsquo;ll leave the files in the <a href="https://github.com/ldatb/website">GitHub repo</a></em></p>
+<p>It might be worth saying that, for the entire challenge, I was doing
+stuff with IaaC. Turns out that&rsquo;s not the best way of learning both
+Terraform and AWS at the same time, and if I were to do this again, I
+would first do everything manually, so I can learn it better, and then
+turn it into a IaC project. Nonetheless, it was very fun seeing the
+Terraform building everything.</p>
+<p><strong>What I learned:</strong></p>
+<ul>
+<li>Using Terraform to build AWS projects</li>
+<li>IaaC</li>
+</ul>
+<h2 id="cicd">CI/CD</h2>
+<p>This was by far the easiest part. As I was hosting my code on GitHub,
+I could use GitHub Actions to make a simple CI/CD pipeline so that
+every time that I update either the API or the website, it
+automatically updates everything, and I never (hopefully) have to do
+anything ever again!</p>
+<p>What I learned:</p>
+<ul>
+<li>CI/CD</li>
+<li>GitHub Actions</li>
+</ul>
+<h2 id="the-end">The End!</h2>
+<p>And with this blog post, I finish the challenge, and officially enter
+the Champions club!</p>
+<p>This was a super fun and amazing project that helped me learn SO MUCH
+about AWS and DevOps. I hope doing more stuff like that in the future.</p>
+<p>You can check the final product <a href="https://ldatb.com/">here</a></p>
+
+      </div>
+    </article>
+
+    <hr />
+
+    <div class="post-info">
+      
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="tags/cloud/">cloud</a></span>
+        <span class="tag"><a href="tags/resume/">resume</a></span>
+        <span class="tag"><a href="tags/aws/">aws</a></span>
+        <span class="tag"><a href="tags/development/">development</a></span>
+        
+    </p>
+
+      
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder meta-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+
+        <span class="tag"><a href="categories/development/">Development</a></span>
+        
+    </p>
+
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        1241 Words
+      </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        
+          2023-02-05 21:00
+        
+
+         
+          
+        
+      </p>
+    </div>
+
+    
+
+    
+
+    
+
+  </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2023</span>
+            
+            
+            
+            
+        </div>
+    </div>
+    
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span><span>Theme provided by <a href="https://github.com/rhazdon">Djordje Atlialp</a></span>
+        </div>
+    </div>
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.205d491810c28f95aa953fae884e1c27abe13fdf93ec63b882d0036b248d4a6282eb2d134e4e7225c6ad6e86db87b08488a361ca4a7383d01fcff43f3d57b9c3.js" integrity="sha512-IF1JGBDCj5WqlT&#43;uiE4cJ6vhP9&#43;T7GO4gtADaySNSmKC6y0TTk5yJcatbobbh7CEiKNhykpzg9Afz/Q/PVe5ww=="></script>
+
+
+
+    </body>
+</html>

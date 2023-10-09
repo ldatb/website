@@ -1,19 +1,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on Lucas de Ataides</title>
-        <link>./posts/</link>
+        <link>/posts/</link>
         <description>Recent content in Posts on Lucas de Ataides</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Mon, 06 Feb 2023 00:00:00 +0000</lastBuildDate>
-        <atom:link href="./posts/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
             <title>Cloud Résumé Challenge: My (AWS)some journey</title>
-            <link>./posts/2023/02/cloud-r%C3%A9sum%C3%A9-challenge-my-awssome-journey/</link>
+            <link>/posts/cloud-resume-challenge/</link>
             <pubDate>Mon, 06 Feb 2023 00:00:00 +0000</pubDate>
             
-            <guid>./posts/2023/02/cloud-r%C3%A9sum%C3%A9-challenge-my-awssome-journey/</guid>
+            <guid>/posts/cloud-resume-challenge/</guid>
             <description>I&amp;rsquo;ve always been a fan of pipelines, automation and all this awesome stuff, but I had no idea there was a name for it. DevOps. It really changed my mind, and my career goals. I was constantly doing courses and looking for fun projects to do, but no one was satisfying me enough, they were either too simple or didn&amp;rsquo;t fit my goal. That was until I found out about the Cloud Résumé Challenge.</description>
             <content type="html"><![CDATA[<p>I&rsquo;ve always been a fan of pipelines, automation and all this awesome
 stuff, but I had no idea there was a name for it. DevOps. It really

@@ -1,12 +1,9 @@
-baseurl      = "."
-custom_css = "css/file.css"
+baseurl      = ""
+relativeURLs = "True"
 title        = "Lucas de Ataides"
 languageCode = "en-us"
 theme        = "hello-friend-ng"
 paginate     = 10
-
-[permalinks]
-  posts = "/posts/:year/:month/:title/"
 
 [author]
   name = "Lucas de Ataides"
@@ -34,13 +31,13 @@ paginate     = 10
   # Show a global language switcher in the navigation bar
   enableGlobalLanguageMenu = false
 
+  # The theme is respecting the prefers-color-scheme of the operating system.
+  enableThemeToggle = true
+
   # Metadata mostly used in document's head
   description = "Lucas de Ataides' website"
   keywords = "homepage, blog, developer, cloud, software"
   images = [""]
-
-  # The theme is respecting the prefers-color-scheme of the operating system.
-  enableThemeToggle = true
 
   [params.logo]
     logoMark     = ">"
