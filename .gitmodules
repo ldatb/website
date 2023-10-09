@@ -1,3 +1,6 @@
 [submodule "blog/themes/risotto"]
 	path = blog/themes/risotto
 	url = https://github.com/joeroe/risotto.git
+[submodule "ldatb/themes/hello-friend-ng"]
+	path = ldatb/themes/hello-friend-ng
+	url = https://github.com/rhazdon/hugo-theme-hello-friend-ng.git

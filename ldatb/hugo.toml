@@ -1,0 +1,85 @@
+baseurl      = "localhost"
+title        = "Lucas de Ataides"
+languageCode = "en-us"
+theme        = "hello-friend-ng"
+paginate     = 10
+
+[permalinks]
+  posts = "/posts/:year/:month/:title/"
+
+[author]
+  name = "Lucas de Ataides"
+
+[taxonomies]
+  category = "blog"
+  tag      = "tags"
+  series   = "series"
+
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04"
+
+  # Subtitle for home
+  homeSubtitle = "I'm a Software Developer specialized in Cloud Platforms"
+
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  disableReadOtherPosts = false
+
+  # Enable sharing buttons, if you like
+  enableSharingButtons = false
+  
+  # Show a global language switcher in the navigation bar
+  enableGlobalLanguageMenu = false
+
+  # Metadata mostly used in document's head
+  description = "Lucas de Ataides' website"
+  keywords = "homepage, blog, developer, cloud, software"
+  images = [""]
+
+  # The theme is respecting the prefers-color-scheme of the operating system.
+  enableThemeToggle = true
+
+  [params.logo]
+    logoMark     = ">"
+    logoText     = "ldatb"
+    logoHomeLink = "/"
+
+  [[params.social]]
+    name = "email"
+    url  = "mailto:lucasatab@gmail.com"
+
+  [[params.social]]
+    name = "github"
+    url  = "https://github.com/ldatb"
+
+  [[params.social]]
+    name = "linkedin"
+    url  = "https://www.linkedin.com/in/lucasdeataides"
+
+  [params.footer]
+    trademark = 2023
+    rss = false
+    copyright = false
+    author = false
+
+    topText = []
+    bottomText = [
+      "Powered by <a href=\"http://gohugo.io\">Hugo</a>",
+      "Theme provided by <a href=\"https://github.com/rhazdon\">Djordje Atlialp</a>"
+    ]
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "about/"
+  [[menu.main]]
+    identifier = "resume"
+    name       = "Résumé"
+    url        = "resume/"
+  [[menu.main]]
+    identifier = "posts"
+    name       = "Posts"
+    url        = "posts/"
