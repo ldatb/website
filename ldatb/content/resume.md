@@ -29,6 +29,7 @@ aliases = ["resume"]
 
 ## Courses
 
+- **Google Data Analytics** - Google | 240 hours | Nov, 2023
 - **Mathematics for Machine Learning** - Imperial College London | Mar, 2023
 - **Infrastructure as a code** - Alura | Jan, 2023
 - **Software Engineering** - Alura | Nov, 2022
